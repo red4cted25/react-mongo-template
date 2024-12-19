@@ -7,7 +7,7 @@ const App = () => {
 
   const handleOnSubmit = async(e)=>{
     e.preventDefault()
-    let result = await fetch('http://localhost:5000/users',{
+    let result = await fetch('https://react-mongo-template-backend.onrender.com/users',{
       method: 'POST',
       body: JSON.stringify({name,email, id:Date.now()}),
       headers:{'Content-Type': 'application/json'}
