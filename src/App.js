@@ -10,7 +10,10 @@ const App = () => {
     let result = await fetch('https://react-mongo-template-backend.onrender.com/users',{
       method: 'POST',
       body: JSON.stringify({name,email, id:Date.now()}),
-      headers:{'Content-Type': 'application/json'}
+      headers:{
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
     })
     result = await result.json()
     console.log(result)
